@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var myMessage: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
             myMessage.text = "Swiftacular"
             myMessage.textColor = UIColor.yellow
             myMessage.textAlignment = NSTextAlignment.left
+            myImage.image = UIImage(named: "image0")
             count1+=1
             
         }
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
             myMessage.text = "Makin' Apps Swiftly"
             myMessage.textColor = UIColor.cyan
             myMessage.textAlignment = NSTextAlignment.left
+            myImage.image = UIImage(named: "image1")
             count1-=1
             
         }
@@ -40,6 +44,7 @@ class ViewController: UIViewController {
             myMessage.text = "You are Awesome"
             myMessage.textColor = UIColor.blue
             myMessage.textAlignment = NSTextAlignment.right
+            myImage.image = UIImage(named: "image2")
             count2+=1
         }
             
@@ -47,6 +52,7 @@ class ViewController: UIViewController {
             myMessage.text = "Swift is Awesome"
             myMessage.textColor = UIColor.black
             myMessage.textAlignment = NSTextAlignment.right
+            myImage.image = UIImage(named: "image3")
             count2-=1
         }
 
