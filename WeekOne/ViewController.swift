@@ -11,38 +11,42 @@ import UIKit
 class ViewController: UIViewController {
     
 
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var myMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     var count1 = 0
-    @IBAction func sayItPressed(_ sender: UIButton) {
+    @IBAction func showMessagePressed(_ sender: UIButton) {
         if count1%2 == 0 {
-            messageLabel.text = "Swiftacular"
-            messageLabel.textColor = UIColor.yellow
+            myMessage.text = "Swiftacular"
+            myMessage.textColor = UIColor.yellow
+            myMessage.textAlignment = NSTextAlignment.left
             count1+=1
             
         }
             
         else{
-            messageLabel.text = "Makin' Apps Swiftly"
-            messageLabel.textColor = UIColor.cyan
+            myMessage.text = "Makin' Apps Swiftly"
+            myMessage.textColor = UIColor.cyan
+            myMessage.textAlignment = NSTextAlignment.left
             count1-=1
             
         }
     }
     var count2 = 0
-    @IBAction func showOtherPressed(_ sender: UIButton) {
+    @IBAction func showOtherMessagePressed(_ sender: UIButton) {
         if count2%2 == 0 {
-            messageLabel.text = "You are Awesome"
-            messageLabel.textColor = UIColor.blue
+            myMessage.text = "You are Awesome"
+            myMessage.textColor = UIColor.blue
+            myMessage.textAlignment = NSTextAlignment.right
             count2+=1
         }
             
         else{
-            messageLabel.text = "Swift is Awesome"
-            messageLabel.textColor = UIColor.black
+            myMessage.text = "Swift is Awesome"
+            myMessage.textColor = UIColor.black
+            myMessage.textAlignment = NSTextAlignment.right
             count2-=1
         }
 
