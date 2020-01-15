@@ -22,12 +22,14 @@ class ViewController: UIViewController {
             messageLabel.text = "Swiftacular"
             messageLabel.textColor = UIColor.yellow
             count1+=1
+            
         }
             
         else{
             messageLabel.text = "Makin' Apps Swiftly"
             messageLabel.textColor = UIColor.cyan
             count1-=1
+            
         }
     }
     var count2 = 0
