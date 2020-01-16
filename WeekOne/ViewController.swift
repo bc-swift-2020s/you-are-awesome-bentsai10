@@ -18,46 +18,32 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    var count1 = 0
     @IBAction func showMessagePressed(_ sender: UIButton) {
-        if count1%2 == 0 {
-            myMessage.text = "Swiftacular"
-            myMessage.textColor = UIColor.yellow
-            myMessage.textAlignment = NSTextAlignment.left
-            myImage.image = UIImage(named: "image0")
-            count1+=1
-            
-        }
-            
-        else{
+        if  myMessage.text == "Swiftacular" {
             myMessage.text = "Makin' Apps Swiftly"
-            myMessage.textColor = UIColor.cyan
-            myMessage.textAlignment = NSTextAlignment.left
-            myImage.image = UIImage(named: "image1")
-            count1-=1
+            myMessage.textColor = UIColor.yellow
+            myMessage.textAlignment = NSTextAlignment.center
+            myImage.image = UIImage(named: "image0")
             
         }
-    }
-    var count2 = 0
-    @IBAction func showOtherMessagePressed(_ sender: UIButton) {
-        if count2%2 == 0 {
-            myMessage.text = "You are Awesome"
-            myMessage.textColor = UIColor.blue
-            myMessage.textAlignment = NSTextAlignment.right
+        else if myMessage.text == "You Are Cool" {
+            myMessage.text = "Swiftacular"
+            myMessage.textColor = UIColor.red
+            myMessage.textAlignment = NSTextAlignment.left
             myImage.image = UIImage(named: "image2")
-            count2+=1
+            
         }
             
         else{
-            myMessage.text = "Swift is Awesome"
-            myMessage.textColor = UIColor.black
+            myMessage.text = "You Are Cool"
+            myMessage.textColor = UIColor.cyan
             myMessage.textAlignment = NSTextAlignment.right
-            myImage.image = UIImage(named: "image3")
-            count2-=1
+            
+            myImage.image = UIImage(named: "image1")
+            
         }
-
-        
     }
+    
     
     
 
