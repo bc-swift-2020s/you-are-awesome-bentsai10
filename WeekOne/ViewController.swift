@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myMessage.text = ""
         // Do any additional setup after loading the view.
     }
     @IBAction func showMessagePressed(_ sender: UIButton) {
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
             myImage.image = UIImage(named: "image0")
             
         }
-        else if myMessage.text == "You Are Cool" {
+        else if myMessage.text == "You Are Cool" || myMessage.text == "" {
             myMessage.text = "Swiftacular"
             myMessage.textColor = UIColor.red
             myMessage.textAlignment = NSTextAlignment.left
