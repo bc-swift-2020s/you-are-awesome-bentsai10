@@ -15,37 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-L0-uT5">
-                                <rect key="frame" x="185.5" y="172" width="43" height="30"/>
-                                <state key="normal" title="Say It!"/>
-                                <connections>
-                                    <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgb-ZY-8oc"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-lL-uaL">
-                                <rect key="frame" x="16" y="200" width="382" height="642"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-bw-W9v">
-                                <rect key="frame" x="16" y="64" width="382" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="bA6-oZ-BkH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                <color key="textColor" red="0.49657088519999998" green="0.1187229976" blue="0.082321755590000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-3Y-hxm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxZ-bw-W9v">
+                                        <rect key="frame" x="31" y="8" width="352" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                        <color key="textColor" red="0.49657088519999998" green="0.1187229976" blue="0.082321755590000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-L0-uT5">
+                                        <rect key="frame" x="186" y="64" width="43" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Say It!"/>
+                                        <connections>
+                                            <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgb-ZY-8oc"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-lL-uaL">
+                                        <rect key="frame" x="31" y="102" width="352" height="708"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84985190629999996" green="0.79434406759999998" blue="0.64703571800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.84985190629999996" green="0.79434406759999998" blue="0.64703571800000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dxZ-bw-W9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0Td-f1-g8s"/>
-                            <constraint firstItem="v4e-lL-uaL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="97g-cG-tVT"/>
-                            <constraint firstItem="v4e-lL-uaL" firstAttribute="top" secondItem="dxZ-bw-W9v" secondAttribute="bottom" constant="36" id="FtC-7r-nd4"/>
-                            <constraint firstItem="5dC-L0-uT5" firstAttribute="top" secondItem="dxZ-bw-W9v" secondAttribute="bottom" constant="8" id="KWq-Fk-q3Z"/>
-                            <constraint firstItem="dxZ-bw-W9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WR0-F4-R5H"/>
-                            <constraint firstItem="5dC-L0-uT5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ax3-YY-VQi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4e-lL-uaL" secondAttribute="trailing" constant="16" id="lRf-Z7-lDz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v4e-lL-uaL" secondAttribute="bottom" constant="20" id="viy-Wk-Sta"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxZ-bw-W9v" secondAttribute="trailing" constant="16" id="wID-p1-HJ7"/>
+                            <constraint firstItem="6fl-3Y-hxm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GcS-yc-K9e"/>
+                            <constraint firstItem="6fl-3Y-hxm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JF9-0y-HWS"/>
+                            <constraint firstItem="6fl-3Y-hxm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q4u-ns-bTA"/>
+                            <constraint firstItem="6fl-3Y-hxm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WNS-xO-V4N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="117.25352112676056"/>
+            <point key="canvasLocation" x="136.875" y="116.19718309859155"/>
         </scene>
     </scenes>
 </document>
