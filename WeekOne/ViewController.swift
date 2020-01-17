@@ -43,7 +43,6 @@ class ViewController: UIViewController {
             myMessage.text = coolMessage
             myMessage.textColor = UIColor.cyan
             myMessage.textAlignment = NSTextAlignment.right
-            
             myImage.image = UIImage(named: "image1")
             
         }
