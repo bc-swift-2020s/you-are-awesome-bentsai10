@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         myMessage.text = ""
         myImage.contentMode = .scaleAspectFit
-        
         // Do any additional setup after loading the view.
         
     }
