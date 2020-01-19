@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         myMessage.text = ""
         myImage.contentMode = .scaleAspectFit
         // Do any additional setup after loading the view.
+        
     }
     @IBAction func showMessagePressed(_ sender: UIButton) {
         
