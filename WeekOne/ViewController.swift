@@ -15,22 +15,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     
     var imageNumber = 0
-    
-    let swiftMessage = "Swiftacular"
-    let coolMessage = "You Are Cool"
-    let makinMessage = "Makin' Apps Swiftly"
+    var phraseNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myMessage.text = ""
         myImage.contentMode = .scaleAspectFit
+        
         // Do any additional setup after loading the view.
         
     }
     @IBAction func showMessagePressed(_ sender: UIButton) {
-        
+        let inspiringMessages = ["Swiftacular",
+                                 "You Are Cool",
+                                 "Makin' Apps Swiftly"]
         //let imageName = "image" + String(imageNumber)
         let imageName = "image\(imageNumber)"
+        myMessage.text = inspiringMessages[phraseNumber]
+        phraseNumber += 1
+        if phraseNumber == inspiringMessages.count{
+            phraseNumber = 0
+        }
         myImage.image = UIImage(named: imageName)
         imageNumber += 1
         if imageNumber == 10{
