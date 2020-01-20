@@ -29,6 +29,7 @@ class ViewController: UIViewController {
                                  "Makin' Apps Swiftly",
                                  "Swift = Awesome",
                                  "Professor Gallaugher is a Swift God"]
+        
         let imageName = "image\(Int.random(in:0...9))"
         myMessage.text = inspiringMessages[Int.random(in:0...inspiringMessages.count-1)]
         myMessage.textColor = colors[Int.random(in:0...colors.count-1)]
