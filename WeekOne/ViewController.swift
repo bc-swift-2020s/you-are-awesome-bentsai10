@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var myMessage: UILabel!
     @IBOutlet weak var myImage: UIImageView!
     
-    var imageNumber = 0
-    var phraseNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +23,17 @@ class ViewController: UIViewController {
         
     }
     @IBAction func showMessagePressed(_ sender: UIButton) {
+        let colors = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.blue, UIColor.green, UIColor.black, UIColor.purple]
         let inspiringMessages = ["Swiftacular",
                                  "You Are Cool",
-                                 "Makin' Apps Swiftly"]
-        //let imageName = "image" + String(imageNumber)
-        let imageName = "image\(imageNumber)"
-        myMessage.text = inspiringMessages[phraseNumber]
-        phraseNumber += 1
-        if phraseNumber == inspiringMessages.count{
-            phraseNumber = 0
-        }
+                                 "Makin' Apps Swiftly",
+                                 "Swift = Awesome",
+                                 "Professor Gallaugher is a Swift God"]
+        let imageName = "image\(Int.random(in:0...9))"
+        myMessage.text = inspiringMessages[Int.random(in:0...inspiringMessages.count-1)]
+        myMessage.textColor = colors[Int.random(in:0...colors.count-1)]
         myImage.image = UIImage(named: imageName)
-        imageNumber += 1
-        if imageNumber == 10{
-            imageNumber = 0
-        }
+
         
          
         //        if  myMessage.text == swiftMessage{
