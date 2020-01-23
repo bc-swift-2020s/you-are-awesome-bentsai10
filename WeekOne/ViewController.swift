@@ -30,35 +30,32 @@ class ViewController: UIViewController {
                                  "Swift = Awesome",
                                  "Professor Gallaugher is a Swift God"]
         
-        let imageName = "image\(Int.random(in:0...9))"
-        myMessage.text = inspiringMessages[Int.random(in:0...inspiringMessages.count-1)]
-        myMessage.textColor = colors[Int.random(in:0...colors.count-1)]
-        myImage.image = UIImage(named: imageName)
-
+        var messageNumber = 0
+        var imageNumber = 0
+        var colorNumber = 0
         
-         
-        //        if  myMessage.text == swiftMessage{
-        //            myMessage.text = makinMessage
-        //            myMessage.textColor = UIColor.yellow
-        //            myMessage.textAlignment = NSTextAlignment.center
-        //            myImage.image = UIImage(named: "image0")
-        //
-        //        }
-        //        else if myMessage.text == coolMessage || myMessage.text == "" {
-        //            myMessage.text = swiftMessage
-        //            myMessage.textColor = UIColor.red
-        //            myMessage.textAlignment = NSTextAlignment.left
-        //            myImage.image = UIImage(named: "image2")
-        //
-        //        }
-        //
-        //        else{
-        //            myMessage.text = coolMessage
-        //            myMessage.textColor = UIColor.cyan
-        //            myMessage.textAlignment = NSTextAlignment.right
-        //            myImage.image = UIImage(named: "image1")
-        //
-        //        }
+        
+        var newMessageNumber = Int.random(in:0...inspiringMessages.count-1)
+        repeat{
+            newMessageNumber = Int.random(in:0...inspiringMessages.count-1)
+        }while messageNumber == newMessageNumber
+        messageNumber = newMessageNumber
+        myMessage.text = inspiringMessages[messageNumber]
+        
+        var newImageNumber = Int.random(in: 0...9)
+        repeat {
+            newImageNumber = Int.random(in:0...9)
+        }while imageNumber == newImageNumber
+        imageNumber = newImageNumber
+        myImage.image = UIImage.init(named: "image\(imageNumber)")
+        
+        var newColorNumber = Int.random(in:0...colors.count-1)
+        repeat{
+            newColorNumber = Int.random(in:0...colors.count-1)
+        }while colorNumber == newColorNumber
+        colorNumber = newColorNumber
+        myMessage.textColor = colors[colorNumber]
+        
     }
     
     
