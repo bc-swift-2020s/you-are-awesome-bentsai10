@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func showMessagePressed(_ sender: UIButton) {
+       
         let colors = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.blue, UIColor.green, UIColor.black, UIColor.purple]
         let inspiringMessages = ["Swiftacular",
                                  "You Are Cool",
