@@ -30,7 +30,6 @@ class ViewController: UIViewController {
                                  "Makin' Apps Swiftly",
                                  "Swift = Awesome",
                                  "Professor Gallaugher is a Swift God"]
-        
         var messageNumber = 0
         var imageNumber = 0
         var colorNumber = 0
