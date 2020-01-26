@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
 
     @IBOutlet weak var myMessage: UILabel!
     @IBOutlet weak var myImage: UIImageView!
+    
+    var audioPlayer =  AVAudioPlayer()
     
     
     override func viewDidLoad() {
@@ -55,6 +58,17 @@ class ViewController: UIViewController {
         }while colorNumber == newColorNumber
         colorNumber = newColorNumber
         myMessage.textColor = colors[colorNumber]
+        
+        if let sound = NSDataAsset(name: "sound0"){
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data )
+                audioPlayer.play()
+            }catch {
+                print("😡ERROR: \(error.localizedDescription)Could not initialize AVAudioPlayer object")
+            }
+        }else{
+            print("😡ERROR: Could not read data from file sound0")
+        }
         
     }
     
