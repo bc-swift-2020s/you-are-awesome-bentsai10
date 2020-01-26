@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         colorNumber = newColorNumber
         myMessage.textColor = colors[colorNumber]
         
+        
         if let sound = NSDataAsset(name: "sound0"){
             do{
                 try audioPlayer = AVAudioPlayer(data: sound.data )
