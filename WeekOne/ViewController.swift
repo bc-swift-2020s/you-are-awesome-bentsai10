@@ -74,8 +74,6 @@ class ViewController: UIViewController {
         myMessage.textColor = colors[colorNumber]
         
         soundNumber = nonRepeatingRandom(originalNumber:  soundNumber, upperLimit: totalSounds-1)
-        soundNumber = newSoundNumber
-        
         playSound(name: "sound\(soundNumber)")
         
         
