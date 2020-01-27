@@ -25,6 +25,28 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    
+    func playSound(name:String){
+        if let sound = NSDataAsset(name: name){
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data )
+                audioPlayer.play()
+            }catch {
+                print("😡ERROR: \(error.localizedDescription)Could not initialize AVAudioPlayer object")
+            }
+        }else{
+            print("😡ERROR: Could not read data from file sound\(name)")
+        }
+    }
+    
+    func nonRepeatingRandom(originalNumber: Int, upperLimit:Int) -> Int{
+        var newNumber:Int
+        repeat{
+            newNumber = Int.random(in:0...upperLimit)
+        }while originalNumber == newNumber
+        return newNumber
+    }
+    
     @IBAction func showMessagePressed(_ sender: UIButton) {
        
         let colors = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.blue, UIColor.green, UIColor.black, UIColor.purple]
@@ -33,43 +55,29 @@ class ViewController: UIViewController {
                                  "Makin' Apps Swiftly",
                                  "Swift = Awesome",
                                  "Professor Gallaugher is a Swift God"]
-        var messageNumber = 0
-        var imageNumber = 0
-        var colorNumber = 0
+        var messageNumber = -1
+        var imageNumber = -1
+        var colorNumber = -1
+        var soundNumber = -1
+        
+        let totalImages = 10
+        let totalSounds = 6
         
         
-        var newMessageNumber = Int.random(in:0...inspiringMessages.count-1)
-        repeat{
-            newMessageNumber = Int.random(in:0...inspiringMessages.count-1)
-        }while messageNumber == newMessageNumber
-        messageNumber = newMessageNumber
+        messageNumber = nonRepeatingRandom(originalNumber:  messageNumber, upperLimit: inspiringMessages.count-1)
         myMessage.text = inspiringMessages[messageNumber]
         
-        var newImageNumber = Int.random(in: 0...9)
-        repeat {
-            newImageNumber = Int.random(in:0...9)
-        }while imageNumber == newImageNumber
-        imageNumber = newImageNumber
+        imageNumber = nonRepeatingRandom(originalNumber:  imageNumber, upperLimit: totalImages-1)
         myImage.image = UIImage.init(named: "image\(imageNumber)")
         
-        var newColorNumber = Int.random(in:0...colors.count-1)
-        repeat{
-            newColorNumber = Int.random(in:0...colors.count-1)
-        }while colorNumber == newColorNumber
-        colorNumber = newColorNumber
+        colorNumber = nonRepeatingRandom(originalNumber:  colorNumber, upperLimit: colors.count-1)
         myMessage.textColor = colors[colorNumber]
         
+        soundNumber = nonRepeatingRandom(originalNumber:  soundNumber, upperLimit: totalSounds-1)
+        soundNumber = newSoundNumber
         
-        if let sound = NSDataAsset(name: "sound0"){
-            do{
-                try audioPlayer = AVAudioPlayer(data: sound.data )
-                audioPlayer.play()
-            }catch {
-                print("😡ERROR: \(error.localizedDescription)Could not initialize AVAudioPlayer object")
-            }
-        }else{
-            print("😡ERROR: Could not read data from file sound0")
-        }
+        playSound(name: "sound\(soundNumber)")
+        
         
     }
     
